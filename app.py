@@ -4,3 +4,9 @@ import docker
 import yaml
 import flask
 import flask_caching
+# Static Vars
+
+config = {
+	"CACHE_TYPE": "SimpleCache",
+	"CACHE_DEFAULT_TIMEOUT": 300
+}
