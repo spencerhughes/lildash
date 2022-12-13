@@ -4,6 +4,12 @@ import docker
 import yaml
 import flask
 import flask_caching
+
+# Temporary
+
+top_level_config_key = 'flame'
+enable_config_key = 'url'
+
 # Static Vars
 
 config = {
