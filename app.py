@@ -14,3 +14,6 @@ config = {
 # Initialization
 
 client = docker.from_env()
+app = flask.Flask(__name__)
+app.config.from_mapping(config)
+cache = flask_caching.Cache(app)
