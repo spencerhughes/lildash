@@ -10,3 +10,7 @@ config = {
 	"CACHE_TYPE": "SimpleCache",
 	"CACHE_DEFAULT_TIMEOUT": 300
 }
+
+# Initialization
+
+client = docker.from_env()
