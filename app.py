@@ -60,3 +60,13 @@ else:
 	gunicorn_logger = logging.getLogger('gunicorn.error')
 	app.logger.handlers = gunicorn_logger.handlers
 	app.logger.setLevel(gunicorn_logger.level)
+
+#for container in client.containers.list(filters={'label': 'traefik.enable=true', 'status': 'running'}):
+#for container in client.containers.list(filters={'label': 'flame.url', 'status': 'running'}):
+#	if container.name not in config:
+#		config[container.name] = {}
+#	for label in container.labels:
+#		if label.startswith('flame'):
+#			config[container.name] = add_branch(config[container.name], label.split('.'), container.labels[label])
+#
+#print(yaml.dump(config))
