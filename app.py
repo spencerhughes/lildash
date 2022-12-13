@@ -26,6 +26,14 @@ cache = flask_caching.Cache(app)
 
 # Functions
 
+def add_branch(tree, vector, value):
+	key = vector[0]
+	if len(vector) == 1:
+		tree[key] = value  
+	else: 
+		tree[key] = add_branch(tree[key] if key in tree else {}, vector[1:], value)
+	return tree
+
 def get_containers():
 	return client.containers.list(filters={'label': top_level_config_key + '.' + enable_config_key, 'status': 'running'})
 
